@@ -79,6 +79,32 @@
     padding-top:70px;
 }
 
+.nav{
+    width:100%;
+    margin-top: 40px;
+    border-left: 1px solid #ccc;
+    padding-left: 30px;
+    float: left;
+    position:sticky;
+    top:100px;
+}
+
+.nav-link{
+    color:black;
+}
+
+.nav-link:hover{
+    text-decoration: none;
+    font-weight: 600;
+    color:black;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #444;
+    font-weight: bold;
+    background-color: transparent!important;
+}
+  
 .documentation .documentation-inner{
     font-family: var(--roboto);
     color:#444;
@@ -86,10 +112,16 @@
 
 .documentation .text-title{
     color:black;
+    font-weight: bold;
 }
 
 .documentation-inner img{
     height:350px;
+}
+
+.documentation-inner .img-info{
+    display: flex;
+    justify-content: center;
 }
 
 /* documentation end */
@@ -127,6 +159,11 @@ footer .footer-copyright .name{
     margin:0;
 }
 
+.header-area .main-menu .nav-item{
+    text-align: center;
+    padding: 8px;
+}
+
 .header-area .main-menu .nav-item .nav-link{
     font-family:var(--roboto);
     text-transform: uppercase;
@@ -142,7 +179,7 @@ footer .footer-copyright .name{
 
 .header-area .main-menu a::after {
     display:none;
-    }
+}
 
 .navbar.solid {
     background-color: #1F2833;
@@ -150,64 +187,24 @@ footer .footer-copyright .name{
     box-shadow: 0 0 4px grey;
 }
 
-/* mobile banner start */
-.site-main .site-banner .banner-image >img{
-    padding:5rem;
-}
-.site-main .site-banner .site-title h3{
-    padding-top: 0;
-    font-weight: 500;
-    text-align: center;
-}
+/* documentation start */
 
-.site-main .site-banner .site-title h1{
-    font-size:42px;
-    font-weight: 500;
-    text-align: center;
-}
-
-
-.site-title{
-    text-align: center;
-}
-
-.about-title{
-    text-align: center;
-}
-/* mobile banner end */
-.about-area .about-title{
-    color:var(--title-color);
-    padding:0 3rem;
-}
-/* mobile about us start */
-
-/* mobile about us end */
-
-/* mobile project start */
-.projects .project-desc{
-    text-align: center;
-}
-.carousel-indicators {
-    bottom: -35px;
-}
-/* mobile project end */
-
-/* mobile background start */
-.background .col-md-6{
-    margin:1rem 0 3rem;
+.documentation-inner #big-img{
     height:100%;
+    width:100%;
 }
 
-.background .card{
-    height:100%;
+.documentation-inner .img-info{
+    display: block;
 }
-/* mobile background end */
 
-/* mobile contact start */
-.contact .col-md-4{
-    padding-bottom:0.5rem;
+.right-nav{
+    display: none;
 }
-/* mobile contact end */
+
+
+/* documentation end */
+
 
 /* mobile footer start */
 footer .footer-copyright{

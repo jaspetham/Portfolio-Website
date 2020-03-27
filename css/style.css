@@ -31,20 +31,10 @@
     position: relative;
 }
 .header-area .main-menu .navbar-nav .active:after{
-    /* border-bottom: 4px solid #ffffff;
-    bottom: -10px;
-    content: " ";
-    left: 25px;
-    position: absolute;
-    right: 25px;
-    animation: all ease-in-out 2s;
-    transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
-    transform: scaleX(1); */
-    position: absolute;
-    content: "";
+    position: absolute; 
+    content: ""; 
     height: .1em;
     top: 100%;
-    background: currentColor;
     z-index: -1;
     left: 25px;
     right:25px;
@@ -59,17 +49,15 @@
     top: 100%;
     background: currentColor;
     z-index: -1;
-
     transform: scaleX(0);
     transition: transform .5s cubic-bezier(.95, .05, .795, .035);
-  }
+}
   
  
 
 .navbar{
     background-color: transparent;
     transition: background-color 1s ease 0s;
-   
 }
 
 /* Solid class attached on scroll past first section */
@@ -370,6 +358,10 @@
     color:var(--text-color);
     font-size:1rem;
 }
+
+.form-group label{
+    font-size: 1.25em;
+}
 /* contact end */
 
 
@@ -397,7 +389,7 @@ footer .footer-copyright .name{
 
     .header-area .main-menu .navbar .navbar-brand{
         padding: 0;
-        color:var(--title-color);
+        color:#ffffff;
     }
     
     .header-area .main-menu .navbar{
@@ -405,13 +397,19 @@ footer .footer-copyright .name{
         margin:0;
     }
 
+    .header-area .main-menu .nav-item{
+        text-align: center;
+        padding: 8px;
+    }
+    
+
     .header-area .main-menu .nav-item .nav-link{
         font-family:var(--roboto);
         text-transform: uppercase;
         font-weight: 550;
         font-size: 18px;
         padding: 0;
-        color: var(--title-color);
+        color: #ffffff;
     }
 
     .header-area .main-menu .navbar-nav .active:after{
@@ -420,7 +418,13 @@ footer .footer-copyright .name{
     
     .header-area .main-menu a::after {
         display:none;
-      }
+    }
+
+    .navbar{
+        background-color: #1F2833;
+        transition: background-color 1s ease 0s;
+        box-shadow: 0 0 4px grey;
+    }
 
     .navbar.solid {
         background-color: #1F2833;
@@ -465,9 +469,22 @@ footer .footer-copyright .name{
     .projects .project-desc{
         text-align: center;
     }
+
+    .projects .para{
+        height:120px;
+    }
+
+    .projects img{
+        height:250px;
+    }
+    
+    .projects #app-img{
+        height:250px;
+    }
     .carousel-indicators {
         bottom: -35px;
     }
+
     /* mobile project end */
 
     /* mobile background start */

@@ -18,7 +18,7 @@
   <link href="lib/aos.css" rel="stylesheet" type="text/css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#scrollspy" data-offset="1">
      <!-- Header Start -->
     <header class="header-area">
         <div class="main-menu">
@@ -34,19 +34,19 @@
                         <a class="nav-link active" href="#content">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-us">About</a>
+                        <a class="nav-link" href="index.html#about-us">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills-section">Skills</a>
+                        <a class="nav-link" href="index.html#skills-section">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="index.html#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#background">Experiences</a>
+                        <a class="nav-link" href="index.html#background">Experiences</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="index.html#contact">Contact</a>
                     </li>
                     
                     </ul>
@@ -56,8 +56,8 @@
         </div>
     </header>
     <!-- Header End -->
-    <main class="site-main" id="content">
-        <section class="upper-section">
+    <main class="site-main" id="content" data-spy="scroll" data-target="#right-nav" data-offset="40">
+        <section class="upper-section" id="introduction">
             <div class="overlay">
                 <div class="upper">
                     <div class="container text-white" id="upper-text">
@@ -70,51 +70,79 @@
             </div>
         </section>
 
-        <section class="documentation">
+        <section class="documentation py-5">
            <div class="container">
               <div class="row">
-                  <div class="col-md-9">
-                      <div class="documentation-inner pt-5">
-                            
+                  <div class="col-md-9" >
+                        <div class="documentation-inner pt-5"  >
                             <h3 class="text-title">Introduction</h3>
                             <p>FYP Quiz App is a final year project for my course. The app is based on  the how to be a millionaire game so i decided to build this in android studio.</p>
-                            
-                            
                             <h3 class="text-title">Functions</h3>
-                            <div class="img-info p-3">
-                                <img src="img/Quiz/firebase.jpg" alt="img-fluid" class="pb-3">
-                                <p>To start it off, I will be using Firebase database for my main storage of data. This include my questions, answer, users, ranking, scores. See image above.</p>    
-                            </div>
-                           
-                          
                             <div class="row align-items-center">
-                                <div class="col-md-3">
-                                    <div class="img-info p-3">
-                                        <img src="img/Quiz/login.jpg" alt="img-fluid">  
-                                        <img src="img/Quiz/register.jpg" alt="img-fluid">   
+                                <div class="col-md-12">
+                                    <div class="img-info py-3">
+                                        <img src="img/Quiz/firebase.jpg" alt="img-fluid" class="pb-3" id="big-img">
                                     </div>
+                                    <p>To start it off, I will be using Firebase database for my main storage of data. This include my questions, answer, users, ranking, scores. See image above.</p>            
                                 </div>
-
-                                <div class="col-md-9">
-                                    <p><span class="text-title ">Login/Registration - </span>The app will have login function and registration to make the app more complex.</p>
-                                </div>
-
-                                <div class="col-md-9">
-                                    <p><span class="text-title ">Login/Registration - </span>The app will have login function and registration to make the app more complex.</p>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="img-info p-3">
-                                        <img src="img/Quiz/login.jpg" alt="img-fluid">    
+                                <div class="col-md-12" id="login">
+                                    <div class="img-info py-3">
+                                        <img src="img/Quiz/login.jpg" alt="img-fluid" class="px-2">  
+                                        <img src="img/Quiz/register.jpg" alt="img-fluid" class="px-2">   
                                     </div>
+                                    <p><span class="text-title ">Login/Registration - </span>The app will have login function and registration to make the app more complex. In addition, the sign up will be needed. all this data that user filled in will be added into the firebase database and is updated in real-time. It also check for any existing user if there isn't, it will be add the new user.</p>
+                                </div>
+
+                                <div class="col-md-12" id="main-page">
+                                    <div class="img-info py-3">
+                                        <img src="img/Quiz/home.jpg" alt="img-fluid" class="px-2">   
+                                        <img src="img/Quiz/play.jpg" alt="img-fluid" class="px-2"> 
+                                    </div>
+                                    <p><span class="text-title ">Main Page - </span>Once logged in, there will be 2 tabs. First is the categories of question for the user to choose to play. Once chosen a category, there will be a play button to start the game.</p>
+                                </div>
+
+                                <div class="col-md-12" id="gameplay">
+                                    <div class="img-info py-3">
+                                        <img src="img/Quiz/questions-image.jpg" alt="img-fluid" class="px-2">   
+                                        <img src="img/Quiz/questions-text.jpg" alt="img-fluid" class="px-2"> 
+                                        <img src="img/Quiz/end.jpg" alt="img-fluid" class="px-2"> 
+                                    </div>
+                                    <p><span class="text-title ">Gameplay - </span>The gameplay will be in 10 questions for each category, there will be 2 kind of question. Text based and image based question. There will be a progress bar to display the time left for each question and score will be tracked and which question the user is in. After the end of the question, there will be a summary of your question score.</p>
+                                </div>
+
+                                <div class="col-md-12" id="scoreboard">
+                                    <div class="img-info py-3">
+                                        <img src="img/Quiz/scoreboard.jpg" alt="img-fluid" class="px-2">   
+                                        <img src="img/Quiz/individual-score.jpg" alt="img-fluid" class="px-2"> 
+                                    </div>
+                                    <p><span class="text-title ">Scoreboard - </span>In the main page, there will be a scoreboard. This scoreboard track all of the user total combine score of all the categories. The user's name can be tapped to show their score of each categories. The score will be updated in real-time with the help of firebase.</p>
                                 </div>
                             </div>
-                            
-
-
-                      </div>
-                      
+                        </div>           
                   </div>
+
+                  <nav class="col-sm-3 col-4" id="scrollspy">
+                    <ul class="nav nav-pills flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#introduction">Introduction <span class="sr-only">(current)</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#login"> Login/Registration</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#main-page">Main Page</a>
+                      </li>
+
+                      <li class="nav-item">  
+                        <a class="nav-link" href="#gameplay"> Gameplay</a>
+                    </li>
+
+                    <li class="nav-item">  
+                        <a class="nav-link"href="#scoreboard"> Scoreboard</a>
+                    </li>
+                     
+                    </ul>
+                  </nav>
               </div>
            </div>
         </section>
